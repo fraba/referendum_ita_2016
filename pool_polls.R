@@ -1,4 +1,4 @@
-setwd('/Users/francesco/public_git/referendum_ita_2016')
+setwd('~/public_git/referendum_ita_2016')
 load('data/polls.RData')
 
 # Average last 30 days

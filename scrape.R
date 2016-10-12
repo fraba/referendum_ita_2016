@@ -96,5 +96,5 @@ tab3 <- getPollTable('//*[@id="mw-content-text"]/table[3]', drop_last_row = FALS
 
 polls <- rbind(tab1, tab2, tab3)
 
-setwd('/Users/francesco/public_git/referendum_ita_2016')
+setwd('~/public_git/referendum_ita_2016')
 save(polls, file = 'data/polls.RData')
