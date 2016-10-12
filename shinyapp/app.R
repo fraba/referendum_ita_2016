@@ -92,9 +92,11 @@ ui <- shinyUI(fluidPage(
       tags$p("Each dot represents a poll. Polls are pooled by weightning their sample size 
              (larger sample, higher precision) and their distance in time (closer to present, higher precision).",
              style = "font-size: 85%;"),
-      tags$a("Data collected from Wikipedia", 
-             href = 'https://it.wikipedia.org/wiki/Sondaggi_sul_referendum_costituzionale_del_2016_in_Italia',
-             style = "font-size: 75%; font-style: italic;"),
+      tags$div(
+        HTML(paste0("Data aggregated by <a href='https://it.wikipedia.org/wiki/Sondaggi_sul_referendum_costituzionale_del_2016_in_Italia' target='_blank'>Wikipedia</a>", 
+                    " as they are published by the <a href='http://www.sondaggipoliticoelettorali.it/' target = '_blank'>Italian Government</a>",
+                    " (usually after a 7 days embargo).")),
+        style = "font-size: 75%; font-style: italic;"),
       width = 3),
     mainPanel(
       plotOutput("ts_pool_polls"), width = 9
@@ -127,7 +129,7 @@ ui <- shinyUI(fluidPage(
                               multiple = FALSE,
                               selected = 'All'),
                   tags$p("Each dot represents a poll. Whiskers represent the margin of error based on the sample size of each poll. 
-                         The blue line represent a local regression and might be interpreted as an unweighted trend.", 
+                         The blue line represents a local regression and might be interpreted as an unweighted trend.", 
                          style = "font-size: 85%;")),
            column(8, plotOutput("ts_polls"))),
   tags$hr(),
@@ -135,7 +137,7 @@ ui <- shinyUI(fluidPage(
                     style='font-size: 70%; margin: auto; width: 90%; padding: 10px 10px 10px 10px; text-align: center;',
                     HTML(paste0(
                       "Design: Francesco Bailo (<a href='https://twitter.com/FrBailo' target='_blank'>@FrBailo</a>) ",
-                      "| Code: <a href='https://github.com/fraba/docenti_univ_ita/tree/master/shiny_surname_map' target='_blank'>GitHub</a> ",
+                      "| Code: <a href='https://github.com/fraba/referendum_ita_2016' target='_blank'>GitHub</a> ",
                       "| Powered by: <a href='http://www.R-project.org/' target='_blank'>R</a> and <a href='http://shiny.rstudio.com/' target='_blank'>Shiny</a> ",
                       "| R packages: <a href='http://ggplot2.org' target='_blank'>ggplot2</a> ",
                       "| Hosted by: <a href='https://nectar.org.au/research-cloud/'>Nectar Cloud</a> ",
