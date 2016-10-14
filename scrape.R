@@ -1,4 +1,7 @@
+#!/usr/bin/Rscript
 require(rvest)
+library(methods)
+
 url <- 
   "https://it.wikipedia.org/wiki/Sondaggi_sul_referendum_costituzionale_del_2016_in_Italia"
 

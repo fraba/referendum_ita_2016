@@ -1,3 +1,4 @@
+#!/usr/bin/Rscript
 setwd('~/public_git/referendum_ita_2016')
 load('data/polls.RData')
 

@@ -246,7 +246,3 @@ server <- shinyServer(function(input, output, session) {
 # Run the application 
 shinyApp(ui = ui, server = server)
 
-# ggplot(expected_results, aes(x=date, y=expected_result)) + 
-#   geom_line() +
-#   scale_x_date(limits = as.Date(c("2016-01-31", Sys.Date())))
-
